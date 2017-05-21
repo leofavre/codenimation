@@ -1,0 +1,145 @@
+.type-canvas {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	opacity: 0.5;
+	mix-blend-mode: multiply;
+	pointer-events: none;
+	user-select: none;
+
+	opacity: 1; /* :-) */
+	mix-blend-mode: exclusion; /* :-) */
+
+	mix-blend-mode: multiply; /* 8-) */
+}
+
+.type-animation {
+	position: absolute;
+	display: block;
+	height: auto;
+	white-space: pre;
+	unicode-bidi: embed;
+	font-family: "Fira Code", monospace;
+	font-size: 148px;
+	line-height: 1.2;
+	color: #000;
+	background-color: #fff;
+	mix-blend-mode: multiply;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAEElEQVQYV2NkgID/jFAGAwAKIwEC0Kr4cwAAAABJRU5ErkJggg==);
+}
+
+.type-animation__code {
+	display: block;
+	tab-size: 4;
+	-moz-tab-size: 4;
+	-webkit-tab-size: 4;
+	background-color: #fff;
+	color: #000;
+	mix-blend-mode: lighten;
+}
+
+.type-animation__inner {
+	display: block;
+	padding: 0 0.25em;
+}
+
+.type-animation__selection {
+	position: relative;
+	background-color: #000;
+	box-decoration-break: clone;
+	-webkit-box-decoration-break: clone;
+	color: #fff;
+}
+
+.type-animation__selection--blinking-start::before,
+.type-animation__selection--blinking-end::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	width: 0.04054054054em;
+	height: 1.2em;
+	background-color: #000;
+	animation: blink-animation 1.1s steps(2, start) infinite;
+}
+
+.type-animation__selection--blinking-start::before {
+	margin-left: -0.04054054054em;
+}
+
+@keyframes blink-animation {
+	to {
+		visibility: hidden;
+	}
+}
+
+
+/* variations: smaller */
+
+.type-animation--smaller {
+	background: #000;
+	filter: contrast(1);
+	font-size: 30px;
+	z-index: 2;
+}
+
+.type-animation--smaller .type-animation__selection--blinking-start::before,
+.type-animation--smaller .type-animation__selection--blinking-end::after {
+	width: 2px;
+}
+
+
+/* variations: small */
+
+.type-animation--small {
+	filter: contrast(100);
+	font-size: 80px;
+	z-index: 1;
+}
+
+.type-animation--small .type-animation__selection--blinking-start::before,
+.type-animation--small .type-animation__selection--blinking-end::after {
+	width: 4px;
+}
+
+
+/* variations: normal */
+
+.type-animation--normal {
+	filter: contrast(100);
+	font-size: 160px;
+	z-index: 1;
+}
+
+.type-animation--normal .type-animation__selection--blinking-start::before,
+.type-animation--normal .type-animation__selection--blinking-end::after {
+	width: 6px;
+}
+
+
+/* variations: big */
+
+.type-animation--big {
+	filter: contrast(100);
+	font-size: 300px;
+	z-index: 1;
+}
+
+.type-animation--big .type-animation__selection--blinking-start::before,
+.type-animation--big .type-animation__selection--blinking-end::after {
+	width: 10px;
+}
+
+
+/* variations: bigger */
+
+.type-animation--bigger {
+	filter: contrast(100);
+	font-size: 600px;
+	z-index: 1;
+}
+
+.type-animation--bigger .type-animation__selection--blinking-start::before,
+.type-animation--bigger .type-animation__selection--blinking-end::after {
+	width: 24px;
+}

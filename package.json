@@ -1,0 +1,42 @@
+{
+  "name": "codenimation",
+  "version": "0.0.1",
+  "description": "A coded animation about coding.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "resize:images": "./resize-images.sh",
+    "process": "parallelshell \"npm run process:css\"  \"npm run process:js\" ",
+    "process:css": "mkdir -p ./css && node-sass ./_scss/index.scss --output-style compressed | ./node_modules/.bin/postcss --use autoprefixer -b \"last 3 versions\" > ./css/index.css",
+    "process:js": "mkdir -p ./js && ./node_modules/.bin/rollup -c",
+    "jekyll": "jekyll build --incremental --watch",
+    "watch": "parallelshell \"npm run watch:css\" \"npm run watch:js\" \"npm run watch:includes\"",
+    "watch:css": "./node_modules/.bin/chokidar \"./_scss\" -c \"npm run process:css\"",
+    "watch:js": "./node_modules/.bin/chokidar \"./_js\" -c \"npm run process:js\"",
+    "watch:includes": "./node_modules/.bin/chokidar \"./_includes\" -c \"npm run process\"",
+    "server": "./node_modules/.bin/browser-sync start --server \"_site\" --files \"_site\"",
+    "build": "parallelshell \"npm run jekyll\" \"npm run process\" \"npm run watch\" \"npm run server\""
+  },
+  "author": "Leonardo Favre <leo@leofavre.com> (http://www.leofavre.com/)",
+  "license": "Unlicense",
+  "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.18.12",
+    "chokidar-cli": "^1.2.0",
+    "node-sass": "^4.5.3",
+    "parallelshell": "^2.0.0",
+    "postcss": "^6.0.1",
+    "postcss-cli": "^4.0.0",
+    "rollup": "^0.41.6",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-uglify": "^2.0.0"
+  },
+  "dependencies": {
+    "canivete": "github:leofavre/canivete",
+    "lodash-es": "^4.17.4"
+  }
+}
