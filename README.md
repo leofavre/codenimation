@@ -1,6 +1,8 @@
 # Codenimation
 
-[`A (coded animation) about => coding.`](http://codenimation.leofavre.com)
+A coded animation about coding.
+
+[Check it out!](http://codenimation.leofavre.com)
 
 ## Credits
 
