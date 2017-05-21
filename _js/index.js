@@ -20,10 +20,10 @@ let snippets = [
 	"/(?:\w+|\[.*?\])\.indexOf\(.*?\) ?(?:> -1|< 0)/g"
 ];
 
-let appearances = ["smaller", "normal", "bigger", "bigger"];
+let appearances = ["smaller", "smaller", "normal", "normal", "bigger", "bigger"];
 
 let mySnippetRaffler = new Raffler(snippets),
 	myAppearanceRaffler = new Raffler(appearances);
 
 let poetic = new Codenimation(targetNode, mySnippetRaffler, myAppearanceRaffler);
-poetic.animate(3);
+poetic.animate(5);
