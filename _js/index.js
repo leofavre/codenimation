@@ -20,7 +20,7 @@ let snippets = [
 	"/(?:\w+|\[.*?\])\.indexOf\(.*?\) ?(?:> -1|< 0)/g"
 ];
 
-let appearances = ["smaller", "normal", "normal", "normal", "bigger", "bigger", "bigger"];
+let appearances = ["smaller", "normal", "normal", "bigger", "bigger"];
 
 let mySnippetRaffler = new Raffler(snippets),
 	myAppearanceRaffler = new Raffler(appearances);
