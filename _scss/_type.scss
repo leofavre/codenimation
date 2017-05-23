@@ -22,7 +22,7 @@
 	unicode-bidi: embed;
 	font-family: "Fira Code", monospace;
 	font-size: 148px;
-	line-height: 1.2;
+	line-height: 1.21;
 	color: #000;
 	background-color: #fff;
 	mix-blend-mode: multiply;
@@ -57,14 +57,14 @@
 	content: "";
 	position: absolute;
 	top: 0;
-	width: 0.04054054054em;
+	width: 0.04;
 	height: 1.2em;
 	background-color: #000;
 	animation: blink-animation 1.1s steps(2, start) infinite;
 }
 
 .type-animation__selection--blinking-start::before {
-	margin-left: -0.04054054054em;
+	margin-left: -0.03em;
 }
 
 @keyframes blink-animation {
