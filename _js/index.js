@@ -5,7 +5,6 @@ let targetNode = document.getElementsByClassName("type-canvas")[0];
 
 let snippets = [
 	".type--code::after {\n\tcontent: \"\\00a0\";\n}",
-	"function init(id, arr) {\n\trecords[id] = isArray(arr) ? arr : [arr];\n}",
 	"<link type=\"text/css\" rel=\"stylesheet\" href=\"index.css\">",
 	"<!DOCTYPE html>",
 	"let getEventName = isActive => isActive ? \"active\" : \"inactive\";",
