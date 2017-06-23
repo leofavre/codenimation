@@ -1,6 +1,6 @@
 # Codenimation
 
-A coded animation about coding.
+An animation about coding.
 
 [Check it out!](http://codenimation.leofavre.com)
 
