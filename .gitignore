@@ -1,10 +1,11 @@
 node_modules/
+_site/
+.sass-cache/
+
 npm-debug.log
 .jekyll-metadata
-.sass-cache/
-*.map
-.eslint
-.jsbeautifyrc
 .DS_Store
+
+*.map
 *.sublime-project
 *.sublime-workspace
